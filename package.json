@@ -1,0 +1,22 @@
+{
+  "name": "spritey-automation-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitvitorbin/spritey-automation-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitvitorbin/spritey-automation-challenge/issues"
+  },
+  "homepage": "https://github.com/gitvitorbin/spritey-automation-challenge#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.14"
+  }
+}
