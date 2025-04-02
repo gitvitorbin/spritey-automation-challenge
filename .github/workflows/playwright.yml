@@ -19,8 +19,6 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Enable Debug Mode
-        run: echo "PWDEBUG=1" >> $GITHUB_ENV
       - name: Run API tests
         run: npx playwright test --grep "@api" || (echo "Playwright test failed!" && npx playwright show-trace && exit 1)
       - uses: actions/upload-artifact@v4
@@ -42,8 +40,6 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Enable Debug Mode
-        run: echo "PWDEBUG=1" >> $GITHUB_ENV
       - name: Run UI tests
         run: npx playwright test --grep "@ui" || (echo "Playwright test failed!" && npx playwright show-trace && exit 1)
       - uses: actions/upload-artifact@v4
