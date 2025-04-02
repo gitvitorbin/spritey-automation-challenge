@@ -9,14 +9,13 @@ export default defineConfig({
   reporter: 'html',
 
   projects: [
-    // 📌 Projeto para Testes UI (Web)
+    // 📌 Project for UI (Web)
     {
       name: 'UI Tests (Chromium)',
       use: {
         ...devices['Desktop Chrome'],
         baseURL: 'https://www.saucedemo.com',
         trace: 'on-first-retry',
-        headless: true,
       },
     },
     /*
@@ -37,7 +36,7 @@ export default defineConfig({
       },
     },
 
-    // 📌 Projeto para Testes API
+    // 📌 Project for API
     {
       name: 'API Tests',
       use: {
