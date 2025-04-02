@@ -45,7 +45,7 @@ jobs:
       - name: Enable Debug Mode
         run: echo "PWDEBUG=1" >> $GITHUB_ENV
       - name: Run UI tests
-        run: npx playwright test --grep "@ui" --headless || (echo "Playwright test failed!" && npx playwright show-trace && exit 1)
+        run: npx playwright test --grep "@ui" || (echo "Playwright test failed!" && npx playwright show-trace && exit 1)
       - uses: actions/upload-artifact@v4
         if: always()
         with:

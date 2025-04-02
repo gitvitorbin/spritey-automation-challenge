@@ -16,6 +16,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: 'https://www.saucedemo.com',
         trace: 'on-first-retry',
+        headless: true,
       },
     },
     /*
