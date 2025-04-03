@@ -19,12 +19,12 @@ test.describe('checkout tests for @ui', () => {
 
         await loginPage.goto();
         await loginPage.login('valid_login');
-        await productsPage.addTwoProducts();
+        const expectedTotal = await productsPage.addTwoProducts();
         await header.clickOnShoppingCartButton();
         await cartPage.clickOnCheckoutButton();
         await checkoutPage.fillCheckoutForm();
         await checkoutPage.clickOnContinueButton();
-        //await checkoutOverviewPage.validateTotalPrice();
+        await checkoutOverviewPage.validateTotalPrice(expectedTotal);
         await checkoutOverviewPage.clickOnFinishButton();
         await checkoutCompletePage.validateFinishMessage();
     });

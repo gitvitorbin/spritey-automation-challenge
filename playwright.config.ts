@@ -9,7 +9,6 @@ export default defineConfig({
   reporter: 'html',
 
   projects: [
-    // 📌 Project for UI (Web)
     {
       name: 'UI Tests (Chromium)',
       use: {
@@ -18,7 +17,6 @@ export default defineConfig({
         trace: 'on-first-retry',
       },
     },
-    /*
     {
       name: 'UI Tests (Firefox)',
       use: {
@@ -35,13 +33,5 @@ export default defineConfig({
         trace: 'on-first-retry',
       },
     },
-
-    // 📌 Project for API
-    {
-      name: 'API Tests',
-      use: {
-        baseURL: 'https://reqres.in/',
-      },
-    },*/
   ],
 });
